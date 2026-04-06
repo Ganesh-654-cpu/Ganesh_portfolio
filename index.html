@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Full Stack Developer</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <!-- Portfolio CSS -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particles"></canvas>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════ -->
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container">
+      <a class="nav-brand navbar-brand" href="#hero">GRM</a>
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav gap-1">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-glow"></div>
+    <div class="container">
+      <div class="row align-items-center gy-5">
+
+        <!-- Left: Text -->
+        <div class="col-lg-7">
+          <div class="hero-tag">👋 Available for opportunities</div>
+          <h2 class="hero-heading">
+            <span>I am<br/>
+            <span> Ganesh Mahajan</span><br/>
+            <br>
+            <span id="typeTarget" class="typing"></span>
+          </h2>
+          <p class="hero-sub">
+            “I m Ganesh, a passionate Full Stack Developer who enjoys building clean, scalable, and user-friendly web applications.
+             I love turning ideas into real-world solutions and continuously learning new technologies.
+             My core strength lies in Python & JavaScript, and I enjoy working across both frontend and backend 
+            Knowledge. In my daily life a am a quick lerner crafting scalable web applications
+            with clean code and great user experiences.
+          </p>
+          <div class="hero-btns d-flex flex-wrap gap-3">
+            <a href="#contact" class="btn-primary-custom">Contact Me</a>
+            <a href="./Ganesh_Mahajan_resume.pdf"  class="btn-outline-custom" download>Get Resume</a>
+          </div>
+        </div>
+
+        <!-- Right: Code Card -->
+        <div class="col-lg-5">
+          <div class="code-card position-relative">
+            <div class="dot-row">
+              <div class="dot r"></div>
+              <div class="dot y"></div>
+              <div class="dot g"></div>
+            </div>
+<pre class="mb-0" style="font-size:.77rem;"><span class="kw">const</span> <span class="key">developer</span> = {
+  <span class="str">name</span>:    <span class="val">'Ganesh Mahajan'</span>,
+  <span class="str">skills</span>: [
+    <span class="val">'HTML'</span>, <span class="val">'CSS'</span>, <span class="val">'JavaScript'</span>,
+    <span class="val">'Bootstrap'</span>, <span class="val">'React JS'</span>,
+    <span class="val">'Node JS'</span>, <span class="val">'Express JS'</span>,
+    <span class="val">'MongoDB'</span>, <span class="val">'MySQL'</span>,
+    <span class="val">'Java'</span>, <span class="val">'Spring Boot'</span>,
+  ],
+  <span class="str">hardWorker</span>:   <span class="kw">true</span>,
+  <span class="str">problemSolver</span>: <span class="kw">true</span>,
+  <span class="str">quickLearner</span>:<span class="kw">true</span>,
+  <span class="str">TeamWork</span>: <span class="kw">function</span>() {
+    <span class="kw">return</span> <span class="kw">this</span>.hardWorker &&
+           <span class="kw">this</span>.problemSolver;
+  }
+};</pre>
+            <div class="float-badge">Open to Work 🚀</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════ -->
+  <section id="about">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+
+        <!-- Avatar -->
+        <div class="col-lg-4 text-center reveal">
+          <div class="about-img-wrap d-inline-block">
+            <div class="about-ring"></div>
+            <img
+              src="./emageganesh 2026-03-22 .jpeg" alt="Ganesh Mahajan" height=150px width=200px; 
+              class="about-img"
+            />
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="col-lg-8 reveal">
+          <div class="section-label">Who I Am</div>
+          <h2 class="section-title">About <span>Me</span></h2>
+          <div class="section-divider"></div>
+          <p class="about-text mb-4">
+            My name is <strong style="color:var(--text)">Ganesh Mahajan</strong> I am  
+            a driven programmer who enjoys turning ideas into practical solutions through code. 
+            I have a strong curiosity for technology and a habit of constantly exploring new tools and frameworks.
+            </p>
+          <p class="about-text mb-4">
+          Being a fast and self-motivated learner, I adapt quickly and take initiative to improve my skills.
+           Problem-solving excites me, and I take pride in approaching challenges with a logical and creative mindset. 
+          I am always looking for opportunities to grow and build impactful solutions.
+          </p>
+          <div class="row g-3 mt-2">
+            <div class="col-4"><div class="stat-box"><div class="stat-num">0+</div><div class="stat-lbl">Years Exp</div></div></div>
+            <div class="col-4"><div class="stat-box"><div class="stat-num">02+</div><div class="stat-lbl">Projects</div></div></div>
+            <div class="col-4"><div class="stat-box"><div class="stat-num">10+</div><div class="stat-lbl">Skills</div></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       EXPERIENCE
+  ══════════════════════════════════════ -->
+  <section id="experience">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="section-label">Work History</div>
+        <h2 class="section-title">My <span>Experience</span></h2>
+        <div class="section-divider mx-auto"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="exp-line reveal">
+
+            <div class="exp-dot"></div>
+            <div class="exp-card">
+              <div class="exp-period">March 2026 — Present</div>
+              <div class="exp-role"> Jr.Full Stack Developer</div>
+              <div class="exp-company">Cravita Technology Pvt.Ltd.</div>
+              <div class="exp-desc">
+                Developed and maintained full-stack web applications using React, Node.js, and
+                MongoDB. Collaborated with cross-functional teams to deliver high-quality
+                software solutions on schedule.
+              </div>
+            </div>
+
+            <div class="exp-dot" style="top:auto"></div>
+            <div class="exp-card">
+              <div class="exp-period">March 2024 — Apr 2024</div>
+              <div class="exp-role">Internships</div>
+              <div class="exp-company"> Code Soft</div>
+              <div class="exp-desc">
+                Learned practical skills in programming and development.
+                Built simple web pages using HTML, CSS, JavaScript
+                Fixed bugs and improved website performance
+                Worked on projects. Built and deployed responsive
+                websites and web apps. Code and build something every day to sharpen skills.
+              </div>
+            </div>
+
+            <div class="exp-dot" style="top:auto"></div>
+            <div class="exp-card" style="margin-bottom:0">
+              <div class="exp-period">2022 — 2023</div>
+              <div class="exp-role">Web Development Intern</div>
+              <div class="exp-company">StartUp Studio</div>
+              <div class="exp-desc">
+                Assisted in front-end development using HTML, CSS, Bootstrap, and JavaScript.
+                Gained hands-on experience with React JS and REST API integration.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SKILLS
+  ══════════════════════════════════════ -->
+  <section id="skills">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="section-label">What I Know</div>
+        <h2 class="section-title">My <span>Skills</span></h2>
+        <div class="section-divider mx-auto"></div>
+      </div>
+      <div class="row gy-5">
+
+        <!-- Chips -->
+        <div class="col-lg-6 reveal">
+          <div class="skill-cat">Frontend</div>
+          <div>
+            <span class="skill-chip"><span class="skill-icon">🌐</span>HTML5</span>
+            <span class="skill-chip"><span class="skill-icon">🎨</span>CSS3</span>
+            <span class="skill-chip"><span class="skill-icon">⚡</span>JavaScript</span>
+            <span class="skill-chip"><span class="skill-icon">🅱️</span>Bootstrap</span>
+            <span class="skill-chip"><span class="skill-icon">💨</span>Tailwind CSS</span>
+            <span class="skill-chip"><span class="skill-icon">⚛️</span>React JS</span>
+            <span class="skill-chip"><span class="skill-icon">🔺</span>Next JS</span>
+          </div>
+          <div class="skill-cat">Backend</div>
+          <div>
+            
+            <span class="skill-chip"><span class="skill-icon">🟢</span>Node JS</span>
+            <span class="skill-chip"><span class="skill-icon">🚂</span>Express JS</span>
+            <span class="skill-chip"><span class="skill-icon">🌱</span>Python</span>
+            <span class="skill-chip"><span class="skill-icon">☕</span>Java</span>
+            <span class="skill-chip"><span class="skill-icon">🌿</span>Spring Boot</span>
+            <span class="skill-chip"><span class="skill-icon">🌱</span>Hibernate</span>
+
+          </div>
+          <div class="skill-cat">Database &amp; Tools</div>
+          <div>
+            <span class="skill-chip"><span class="skill-icon">🍃</span>MongoDB</span>
+            <span class="skill-chip"><span class="skill-icon">🐬</span>MySQL</span>
+            <span class="skill-chip"><span class="skill-icon">🐘</span>PostgreSQL</span>
+            <span class="skill-chip"><span class="skill-icon">🐙</span>Git / GitHub</span>
+            <span class="skill-chip"><span class="skill-icon">🐳</span>Docker</span>
+          </div>
+        </div>
+
+        <!-- Progress Bars -->
+        <div class="col-lg-6 reveal">
+          <div class="prog-wrap">
+            <div class="prog-label"><span>React JS</span><span>80%</span></div>
+            <div class="prog-bar-bg"><div class="prog-bar" data-width="80"></div></div>
+          </div>
+          <div class="prog-wrap">
+            <div class="prog-label"><span>Node JS / Express</span><span>75%</span></div>
+            <div class="prog-bar-bg"><div class="prog-bar" data-width="75"></div></div>
+          </div>
+          <div class="prog-wrap">
+            <div class="prog-label"><span>HTML / CSS / Bootstrap</span><span>90%</span></div>
+            <div class="prog-bar-bg"><div class="prog-bar" data-width="90"></div></div>
+          </div>
+          <div class="prog-wrap">
+            <div class="prog-label"><span>JavaScript</span><span>82%</span></div>
+            <div class="prog-bar-bg"><div class="prog-bar" data-width="82"></div></div>
+          </div>
+          <div class="prog-wrap">
+            <div class="prog-label"><span>Java / Spring Boot</span><span>70%</span></div>
+            <div class="prog-bar-bg"><div class="prog-bar" data-width="70"></div></div>
+          </div>
+          <div class="prog-wrap">
+            <div class="prog-label"><span>MongoDB / MySQL</span><span>75%</span></div>
+            <div class="prog-bar-bg"><div class="prog-bar" data-width="75"></div></div>
+          </div>
+          <div class="prog-wrap">
+            <div class="prog-label"><span>Git / GitHub</span><span>80%</span></div>
+            <div class="prog-bar-bg"><div class="prog-bar" data-width="80"></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PROJECTS
+  ══════════════════════════════════════ -->
+  <section id="projects">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="section-label">What I've Built</div>
+        <h2 class="section-title">My <span>Projects</span></h2>
+        <div class="section-divider mx-auto"></div>
+      </div>
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="proj-card h-100">
+            <div class="proj-num">01</div>
+            <div class="proj-title">ShopEasy — E-Commerce Platform</div>
+            <div class="proj-role">Full Stack Developer · PYTHON </div>
+            <div class="proj-desc">
+              A full-featured online shopping platform with product catalog, cart management,
+              user authentication, order tracking, and an admin panel for inventory management.
+            </div>
+            <div>
+              <span class="proj-tag">HTML</span>
+              <span class="proj-tag">CSS</span>
+              <span class="proj-tag">Java Script</span>
+              <span class="proj-tag">Django</span>
+              <span class="proj-tag">Flask</span>
+              <span class="proj-tag">MySql</span>
+              <span class="proj-tag">MongoDB</span>
+            </div>
+            <div class="proj-links">
+              <a href="#" class="proj-btn gh"><i class="bi bi-github me-1"></i>Source</a>
+              <a href="#" class="proj-btn demo"><i class="bi bi-box-arrow-up-right me-1"></i>Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="proj-card h-100">
+            <div class="proj-num">02</div>
+            <div class="proj-title">CoopBank — Banking Web App</div>
+            <div class="proj-role">Full Stack Developer · Won 2nd at Fortune Fest 2024</div>
+            <div class="proj-desc">
+              A secure co-operative banking platform with account management, real-time
+              transactions, admin dashboard, and loan management.
+            </div>
+            <div>
+              <span class="proj-tag">React</span>
+              <span class="proj-tag">Tailwind</span>
+              <span class="proj-tag">PHP</span>
+              <span class="proj-tag">MySQL</span>
+            </div>
+            <div class="proj-links">
+              <a href="#" class="proj-btn gh"><i class="bi bi-github me-1"></i>Source</a>
+              <a href="#" class="proj-btn demo"><i class="bi bi-box-arrow-up-right me-1"></i>Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="proj-card h-100">
+            <div class="proj-num">03</div>
+            <div class="proj-title">TaskFlow — Project Manager</div>
+            <div class="proj-role">Full Stack Developer · MERN Stack</div>
+            <div class="proj-desc">
+              A Kanban-style project management tool with drag-and-drop tasks, team
+              collaboration, deadline tracking, and real-time notifications via Socket.io.
+            </div>
+            <div>
+              <span class="proj-tag">React</span>
+              <span class="proj-tag">Node JS</span>
+              <span class="proj-tag">MongoDB</span>
+              <span class="proj-tag">Socket.io</span>
+            </div>
+            <div class="proj-links">
+              <a href="#" class="proj-btn gh"><i class="bi bi-github me-1"></i>Source</a>
+              <a href="#" class="proj-btn demo"><i class="bi bi-box-arrow-up-right me-1"></i>Demo</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CERTIFICATES
+  ══════════════════════════════════════ -->
+  <section id="certificates">
+    <div class="container">
+
+      <!-- Heading -->
+      <div class="text-center mb-5 reveal">
+        <div class="section-label">Achievements</div>
+        <h2 class="section-title">My <span>Certificates</span></h2>
+        <div class="section-divider mx-auto"></div>
+        <p style="color:var(--muted);max-width:520px;margin:0 auto 1.8rem;">
+          Courses, trainings, and certifications I've completed to sharpen my skills.
+        </p>
+        <!-- Add Certificate Button -->
+        <button class="btn-primary-custom" data-bs-toggle="modal" data-bs-target="#addCertModal">
+          <i class="bi bi-plus-circle me-2"></i>Add Certificate
+        </button>
+      </div>
+
+      <!-- Certificate Cards Grid (rendered by JS) -->
+      <div class="row g-4" id="certGrid">
+        <!-- Populated by script.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Add Certificate Modal ── -->
+  <div class="modal fade" id="addCertModal" tabindex="-1" aria-labelledby="addCertModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addCertModalLabel" style="font-weight:800;">
+            <i class="bi bi-award me-2" style="color:var(--primary)"></i>Add New Certificate
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="certForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Certificate Title *</label>
+                <input type="text" id="certTitle" class="form-control" placeholder="e.g. React JS Complete Course"/>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Issuing Organisation *</label>
+                <input type="text" id="certIssuer" class="form-control" placeholder="e.g. Udemy / Coursera / NPTEL"/>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Date Earned *</label>
+                <input type="text" id="certDate" class="form-control" placeholder="e.g. March 2024"/>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Certificate Link (optional)</label>
+                <input type="url" id="certLink" class="form-control" placeholder="https://..."/>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Skills Covered (comma-separated)</label>
+                <input type="text" id="certSkills" class="form-control" placeholder="e.g. React, Hooks, Redux"/>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Upload Certificate Image (optional)</label>
+                <input type="file" id="certImg" class="form-control" accept="image/*"
+                  onchange="previewCertImage(this)"/>
+                <img id="certImgThumb" class="cert-preview-thumb" alt="Preview"/>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-outline-custom" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn-primary-custom" onclick="submitCert()">
+            <i class="bi bi-check2-circle me-2"></i>Save Certificate
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       EDUCATION
+  ══════════════════════════════════════ -->
+  <section id="education">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="section-label">Academic Background</div>
+        <h2 class="section-title">My <span>Education</span></h2>
+        <div class="section-divider mx-auto"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <div class="edu-card reveal">
+            <div class="edu-icon">🎓</div>
+            <div>
+              <div class="edu-year">Present</div>
+              <div class="edu-degree">Master of Computer Science (MCA)</div>
+              <div class="edu-inst">Savitribai Phule Pune University</div>
+            </div>
+          </div>
+
+          <div class="edu-card reveal">
+            <div class="edu-icon">💻</div>
+            <div>
+              <div class="edu-year">2022 — 2025</div>
+              <div class="edu-degree">Bachelor of Computer Science (BCS)</div>
+              <div class="edu-inst">MJ Collage Jalgaon</div>
+            </div>
+          </div>
+
+          <div class="edu-card reveal">
+            <div class="edu-icon">📚</div>
+            <div>
+              <div class="edu-year">2020 — 2022</div>
+              <div class="edu-degree">Higher Secondary Certificate (XII)</div>
+              <div class="edu-inst">Maharashtra State Board</div>
+            </div>
+          </div>
+
+          <div class="edu-card reveal">
+            <div class="edu-icon">🏫</div>
+            <div>
+              <div class="edu-year">2019 — 2020</div>
+              <div class="edu-degree">Secondary School Certificate (X)</div>
+              <div class="edu-inst">Maharashtra State Board</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Contact <span>Me</span></h2>
+        <div class="section-divider mx-auto"></div>
+        <p style="color:var(--muted);max-width:520px;margin:0 auto;">
+          Feel free to contact me if you have any questions.
+         I am open to work opportunities that match my skills and interests.
+        </p>
+      </div>
+      <div class="row g-4 justify-content-center">
+
+        <!-- Info -->
+        <div class="col-lg-5 reveal">
+          <div class="contact-card h-100">
+            <h5 style="font-weight:700;margin-bottom:1.6rem;">Contact Information</h5>
+            <div class="contact-info-item">
+              <i class="bi bi-envelope-fill"></i>
+              <a href="mailto:ganeshmahajan@gmail.com">ganeshmahajan2004@gmail.com</a>
+            </div>
+            <div class="contact-info-item">
+              <i class="bi bi-telephone-fill"></i>
+              <a href="tel:+919999999999">+91 9021547828 /a>
+            </div>
+            <div class="contact-info-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Pune, Maharashtra — 411001</span>
+            </div>
+            <hr style="border-color:var(--border);margin:1.6rem 0"/>
+            <h6 style="font-weight:700;margin-bottom:1rem;color:var(--muted);font-size:.85rem;letter-spacing:1px;">FIND ME ON</h6>
+            <div>
+               <a href="https://github.com/Ganesh-654-cpu" class="social-icon"><i class="bi bi-github"></i></a>
+               <a href="https://www.linkedin.com/in/ganeshmahajan654" class="social-icon"><i class="bi bi-linkedin"></i></a>
+               <a href="https://instagram.com/ganesh_mahajan_654" class="social-icon"><i class="bi bi-instagram"></i></a>
+               <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="col-lg-7 reveal">
+          <div class="contact-card">
+            <div class="alert-success-custom" id="successMsg">
+              ✅ Message received! I I’ll respond as soon as possible.
+            </div>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Your Name</label>
+                <input type="text" class="form-control" placeholder="Ganesh Mahajan" id="cName"/>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Your Email</label>
+                <input type="email" class="form-control" placeholder="ganeshmahajan2004@gmail.com" id="cEmail"/>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Subject</label>
+                <input type="text" class="form-control" placeholder="Job Opportunity" id="cSubject"/>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Your Message</label>
+                <textarea class="form-control" rows="5" placeholder="Write your message here..." id="cMsg"></textarea>
+              </div>
+              <div class="col-12">
+                <button class="btn-primary-custom w-100" onclick="sendMsg()">
+                  <i class="bi bi-send me-2"></i>Send Message
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="brand mb-2">Ganesh Mahajan</div>
+      <div class="mb-3">
+        <a href="https://github.com/Ganesh-654-cpu" class="social-icon"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/ganeshmahajan654" class="social-icon"><i class="bi bi-linkedin"></i></a>
+        <a href="https://instagram.com/ganesh_mahajan_654" class="social-icon"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+      </div>
+      <p>© 2026 Ganesh Mahajan. Built with ❤️ using HTML, CSS, Bootstrap &amp; JavaScript</p>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-Top -->
+  <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Portfolio JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
