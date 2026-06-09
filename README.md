@@ -1,4 +1,4 @@
-My Portfolio
+____My Portfolio____
 # 🌐 Personal Portfolio Website
 
 A responsive and modern Personal Portfolio Website built using HTML, CSS, JavaScript, and Bootstrap. This portfolio showcases my skills, projects, education, and contact information in a professional way.
@@ -88,9 +88,9 @@ This portfolio is fully responsive and works seamlessly on:
 
 **Ganesh Mahajan**
 
-- GitHub: https://github.com/your-github-username
-- LinkedIn: Add Your LinkedIn Profile
-- Email: your-email@example.com
+- GitHub:  https://github.com/Ganesh-654-cpu
+- LinkedIn: https://www.linkedin.com/in/ganeshmahajan654
+- Email: ganeshmahajan@gmail.com
 
 ## ⭐ Support
 
